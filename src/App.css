@@ -1,0 +1,322 @@
+.app{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.app-header{
+    text-align: center;
+    background: linear-gradient(135deg, #e795f2 0%, #b178ea 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.app-header h1{
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.app-header p{
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.main{
+    margin-top: 2rem;
+
+}
+
+.student-section h2{
+    color: #333;
+    font-size: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.student-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.student-card{
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    transition: all 0.2s ease;
+}
+
+.student-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.student-card.passed{
+    border-color: #4caf50;
+    box-shadow: 0 5px 10px rgba(66, 235, 69, 0.15);
+}
+
+.student-card.failed{
+    border-color: #f44336;
+    box-shadow: 0 5px 10px rgba(244, 67, 54, 0.15);
+}
+
+.student-info h3{
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.student-info p{
+    margin: 0.5rem 0;
+    color: #666;
+    line-height: 1.4;
+}
+
+.student-info strong{
+    color: #333;
+}
+
+.student-status{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.status{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.student-passed{
+    background-color: #e8f5e8;
+    color: #2e7d32;
+}
+
+.student-failed{
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.add-student-section{
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    margin-top: 2rem;
+}
+
+.add-student-section h2{
+    color: #333;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.add-student-form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.form-group{
+    flex: 1 1 270px;
+    display: flex;
+    min-width: 0;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.form-group label{
+    display: flex;
+    white-space: nowrap;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select{
+    width: 100%;
+    height: 40px;
+    padding: 0rem 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+
+}
+
+.button-group{
+    flex: 0 0 180px;
+}
+
+.submit-btn{
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(135deg, #78d57e 0%, #54c676 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(102,126,234,0.3);
+    background: linear-gradient(135deg, #69ce70 0%, #42ca6b 100%);
+}
+
+.submit-btn:active{
+    transform: translateY(0);
+}
+
+.no-students{
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-style: italic;
+}
+
+.no-students p{
+    font-size: 1.1rem;
+}
+
+.student-actions{
+    margin-top: 1rem;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.student-actions.section-1{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.update-grade{
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.update-btn{
+    background: linear-gradient(135deg, #84d78a 0%, #63c480 100%);
+    color: white;
+    border: none;
+    white-space: nowrap;
+    padding: 0.2rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.update-btn:hover{
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #69ce70 0%, #42ca6b 100%);
+}
+
+.delete-btn{
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover{
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+}
+
+.delete-btn:active{
+    transform: scale(0.98);
+}
+
+.toggle-btn{
+    background: linear-gradient(135deg, #8095f0 0%, #3f6cf4 100%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    margin-left: 1rem;
+}
+
+.toggle-btn:hover{
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #3859eb 0%, #2a5ae9 100%);
+}
+
+.filter-students{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-buttons{
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.filter-buttons button{
+    background-color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.filter-buttons button:hover{
+    background-color: #b178ea;
+    color: white;
+}
+
+.filter-buttons .active{
+    background-color: #b178ea;
+    color: white;
+}
+
+
+
+
+
